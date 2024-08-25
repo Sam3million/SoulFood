@@ -148,8 +148,8 @@
     <Compile Include="Assets/com.rlabrecque.steamworks.net/Runtime/autogen/isteamgameserverclient.cs" />
     <Compile Include="Assets/com.rlabrecque.steamworks.net/Runtime/types/SteamInput/InputHandle_t.cs" />
     <Compile Include="Assets/com.rlabrecque.steamworks.net/Runtime/types/SteamNetworkingTypes/HSteamNetConnection.cs" />
-    <Compile Include="Assets/com.rlabrecque.steamworks.net/Runtime/types/SteamNetworkingSockets/ISteamNetworkingConnectionSignaling.cs" />
     <Compile Include="Assets/com.rlabrecque.steamworks.net/Runtime/types/SteamInput/InputActionSetHandle_t.cs" />
+    <Compile Include="Assets/com.rlabrecque.steamworks.net/Runtime/types/SteamNetworkingSockets/ISteamNetworkingConnectionSignaling.cs" />
     <Compile Include="Assets/com.rlabrecque.steamworks.net/Runtime/autogen/isteamremotestorage.cs" />
     <None Include="Assets/com.rlabrecque.steamworks.net/Runtime/com.rlabrecque.steamworks.net.asmdef" />
     <Reference Include="UnityEngine">
