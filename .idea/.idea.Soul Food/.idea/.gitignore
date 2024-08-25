@@ -10,7 +10,8 @@ Assets/Plugins/Editor/JetBrains*
 
 
 ### Unity ###
-[Ll]ibrary/
+Library/
+library/
 [Tt]emp/
 [Oo]bj/
 [Bb]uild/
@@ -82,3 +83,8 @@ crashlytics-build.properties
 .DS_Store*
 Thumbs.db
 Desktop.ini
+
+Library/ArtifactDB
+.idea/workspace.xml
+Library/SourceAssetDB
+Library/Search/transactions.db
