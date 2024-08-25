@@ -1,4 +1,4 @@
-* text=auto
+* text eol=lf
 
 # Unity files
 *.meta -text merge=unityyamlmerge diff
