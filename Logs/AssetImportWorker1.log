@@ -1,0 +1,599 @@
+Unity Editor version:    2022.3.42f1 (2dcb6a0abc42)
+Branch:                  2022.3/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 14.3.1 (Build 23D60)
+Darwin version:          23.3.0
+Architecture:            arm64
+Running under Rosetta:   NO
+Available memory:        16384 MB
+Using pre-set license
+Pro License: YES
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+/Users/samuelrose/Unity Projects/Soul Food
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+61538
+Successfully changed project path to: /Users/samuelrose/Unity Projects/Soul Food
+/Users/samuelrose/Unity Projects/Soul Food
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [8036080704]  Target information:
+
+Player connection [8036080704]  * "[IP] 192.168.1.54 [Port] 0 [Flags] 2 [Guid] 3562937753 [EditorId] 3562937753 [Version] 1048832 [Id] OSXEditor(0,Samuels-MBP.lan) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+
+Player connection [8036080704] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [8036080704] Host joined alternative multi-casting on [225.0.0.222:34997]...
+[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+Refreshing native plugins compatible for Editor in 12.04 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.42f1 (2dcb6a0abc42)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/samuelrose/Unity Projects/Soul Food/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+ preferred device: Apple M1 Pro (high power)
+Metal devices available: 1
+0: Apple M1 Pro (high power)
+Using device Apple M1 Pro (high power)
+Initializing Metal device caps: Apple M1 Pro
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56958
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.001907 seconds.
+- Loaded All Assemblies, in  0.237 seconds
+Native extension for OSXStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.161 seconds
+Domain Reload Profiling: 398ms
+	BeginReloadAssembly (73ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (32ms)
+	LoadAllAssembliesAndSetupDomain (99ms)
+		LoadAssemblies (73ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (98ms)
+			TypeCache.Refresh (97ms)
+				TypeCache.ScanAssembly (87ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (162ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (131ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (1ms)
+			ProcessInitializeOnLoadAttributes (89ms)
+			ProcessInitializeOnLoadMethodAttributes (29ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.405 seconds
+Native extension for OSXStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.405 seconds
+Domain Reload Profiling: 810ms
+	BeginReloadAssembly (72ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (15ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (22ms)
+	LoadAllAssembliesAndSetupDomain (278ms)
+		LoadAssemblies (193ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (116ms)
+			TypeCache.Refresh (105ms)
+				TypeCache.ScanAssembly (93ms)
+			ScanForSourceGeneratedMonoScriptInfo (7ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (406ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (326ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (31ms)
+			ProcessInitializeOnLoadAttributes (278ms)
+			ProcessInitializeOnLoadMethodAttributes (12ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+Launching external process: /Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.04 seconds
+Refreshing native plugins compatible for Editor in 1.07 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3198 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 19 unused Assets / (48.5 KB). Loaded Objects now: 3664.
+Memory consumption went from 128.4 MB to 128.3 MB.
+Total: 2.719542 ms (FindLiveObjects: 0.093958 ms CreateObjectMapping: 0.036292 ms MarkObjects: 2.512041 ms  DeleteObjects: 0.076542 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1687170.836991 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: '2418d44e161e3ce2e8daeaa5c00c20e4') in 0.001030 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Thread 0x2b305f000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.343 seconds
+Native extension for OSXStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.767 seconds
+Domain Reload Profiling: 1111ms
+	BeginReloadAssembly (128ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (48ms)
+	RebuildCommonClasses (27ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (15ms)
+	LoadAllAssembliesAndSetupDomain (165ms)
+		LoadAssemblies (188ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (25ms)
+			TypeCache.Refresh (14ms)
+				TypeCache.ScanAssembly (5ms)
+			ScanForSourceGeneratedMonoScriptInfo (6ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (767ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (326ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (35ms)
+			ProcessInitializeOnLoadAttributes (274ms)
+			ProcessInitializeOnLoadMethodAttributes (11ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+Refreshing native plugins compatible for Editor in 0.81 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3566 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 34 unused Assets / (1.7 MB). Loaded Objects now: 4024.
+Memory consumption went from 149.5 MB to 147.8 MB.
+Total: 3.777416 ms (FindLiveObjects: 0.111625 ms CreateObjectMapping: 0.039875 ms MarkObjects: 3.073042 ms  DeleteObjects: 0.552125 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/PreferenceKeys.cs: 7859eba8df811149af48f0f2276a4bdd -> 
+  custom:scripting/monoscript/fileName/SmoothGroupEditor.cs: 8bc2610f365dc4634fc8c31ccc969585 -> 
+  custom:scripting/monoscript/fileName/DTSweep.cs: b489dbbdebbb3b9e956ffbc2a0d88071 -> 
+  custom:scripting/monoscript/fileName/MeshValidation.cs: 96702c51dfa78152e589ae8ca081a783 -> 
+  custom:scripting/monoscript/fileName/EditorHandleUtility.cs: 0ac2d22f358476e1b744f1f8895e1aba -> 
+  custom:scripting/monoscript/fileName/VertexPositionEditor.cs: 46d235253e54e23a363ea17144ac2a77 -> 
+  custom:scripting/monoscript/fileName/ConnectElements.cs: b040b3cb3e9da34e655bb3a47bd46193 -> 
+  custom:scripting/monoscript/fileName/MeshHandle.cs: 4fb552a16b062d468ef698bbde7ead52 -> 
+  custom:scripting/monoscript/fileName/Spline.cs: 4e387ee563fd6b588142d262df330d27 -> 
+  custom:scripting/monoscript/fileName/EditorToolbarLoader.cs: fdf9b8f64a6e826326906d3119503c10 -> 
+  custom:scripting/monoscript/fileName/DestroyListener.cs: 6be46e6f4b52a4b0718c2fb44268f9ce -> 
+  custom:scripting/monoscript/fileName/MirrorObjects.cs: 352699d4a7651efc5cce5eea885082ac -> 
+  custom:scripting/monoscript/fileName/IHasDefault.cs: d3ac6d93a1f2a0255a9ab45bb4e61b9c -> 
+  custom:scripting/monoscript/fileName/TriangulationPoint.cs: 32917afe2890c1499ece497286a4d04a -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/OpenMaterialEditor.cs: e48180fa4e846a1c9510af46c88df99b -> 
+  custom:scripting/monoscript/fileName/UVEditor.cs: bb46d5bac7199bd3c17dd891460f80ff -> 
+  custom:scripting/monoscript/fileName/TriangulationContext.cs: c42f2501129644a7463ca94823659aca -> 
+  custom:scripting/monoscript/fileName/StripProBuilderScripts.cs: 8d1118df1b038f5729efd517ae8a88bb -> 
+  custom:scripting/monoscript/fileName/ExportObj.cs: c18a1561185a459c7d8d09a4d25283a2 -> 
+  custom:scripting/monoscript/fileName/ProBuilderAnalytics.cs: 2cd7a59044f39493e703b05f32b66c91 -> 
+  custom:scripting/monoscript/fileName/EditorUtility.cs: 9ecaad3632ea628dccaa5e09c1a92225 -> 
+  custom:scripting/monoscript/fileName/LogEditor.cs: 40340fd10eb0d8176aa6afc39bccbaf4 -> 
+  custom:scripting/monoscript/fileName/PositionTool.cs: 2fd18bf8664a011c4421990ba96d6342 -> 
+  custom:scripting/monoscript/fileName/Smoothing.cs: 330a1dd6217f1894b6d80984c74f9c02 -> 
+  custom:scripting/monoscript/fileName/MergeElements.cs: c9b3400349305ddcd54accbdabf30f58 -> 
+  custom:scripting/monoscript/fileName/ToolbarGroup.cs: 61877aef40bf12b94f4563196b114281 -> 
+  custom:scripting/monoscript/fileName/DelaunayTriangle.cs: 908235f5d5e291f50089ca6a8bdf4c13 -> 
+  custom:scripting/monoscript/fileName/FixedBitArray3.cs: bc9279bedd3a6bc1feb5645d9911ddcf -> 
+  custom:scripting/monoscript/fileName/ConnectEdges.cs: 8f686a7fff4566a6aa5be848bd67c552 -> 
+  custom:scripting/monoscript/fileName/GrowSelection.cs: de1d66ff5d47fd9485b62f0576610afb -> 
+  custom:scripting/monoscript/fileName/pb_Stl_Exporter.cs: a0bbf115d527a544930104c2dcebd300 -> 
+  custom:scripting/monoscript/fileName/EntityEditor.cs: a91f91f5e306a57ac3e888e91213305d -> 
+  custom:scripting/monoscript/fileName/IntVec3.cs: 2c04041d253e07e499b1153625966a9e -> 
+  custom:scripting/monoscript/fileName/DTSweepBasin.cs: 245db94975c479306e3cbdfe84d22fb1 -> 
+  custom:scripting/monoscript/fileName/GenerateUV2.cs: 7e9f55032cd43909a50ad3d71fd47174 -> 
+  custom:scripting/monoscript/fileName/Transform2D.cs: 99c230faf7d8b1d82d86bcfe0bdd121e -> 
+  custom:scripting/monoscript/fileName/Math.cs: 4765fe41cdb59756d6a6579184fc0ff8 -> 
+  custom:scripting/precompiled-assembly-types:Unity.ProBuilder: 2737e975d52006c5692d67f91a0dba54 -> 
+  custom:scripting/monoscript/fileName/UVEditing.cs: 282cce0694f10e0de5a3bd7509995bd0 -> 
+  custom:scripting/monoscript/fileName/PolygonSet.cs: 1d5b94bd81a36884686c2f6dc3640c06 -> 
+  custom:scripting/monoscript/fileName/EditorShapeUtility.cs: b01457005654bb980604fba5d004d802 -> 
+  custom:scripting/monoscript/fileName/ShapeMenuItems.cs: 5f7ac6f810ef27e38f22b209ac1fc203 -> 
+  custom:scripting/monoscript/fileName/TextureRotateTool.cs: c2d0baad66e4308f6143c552f0536843 -> 
+  custom:scripting/monoscript/fileName/TextureStitching.cs: 282cce0694f10e0de5a3bd7509995bd0 -> 
+  custom:scripting/monoscript/fileName/FileUtility.cs: 04beb84589e064b503995a508183ab3a -> 2d70b80c72be1fb3b2b89ce0939e8cef
+  custom:scripting/monoscript/fileName/Prism.cs: c53bfe8cdbfb08eaf3dbf8c35a208bd4 -> 
+  custom:scripting/monoscript/fileName/ExportStlBinary.cs: 5c64685a83bd5cbedf78a40252f3b12d -> 
+  custom:scripting/monoscript/fileName/FillHole.cs: 49c97a483d8d6d36ce8ef90c74d4a79f -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/ConstrainedPointSet.cs: c9342aea7930c4ca55cd85acb4b82d33 -> 
+  custom:scripting/monoscript/fileName/PointOnEdgeException.cs: 9e0012c09b9fee63c09ec06c54fbb87d -> 
+  custom:scripting/monoscript/fileName/SelectMaterial.cs: 9a86428319d18f00e00cf559df42df52 -> 
+  custom:scripting/monoscript/fileName/MenuItems.cs: ab30402455eb9666baefef31ea3a5374 -> 
+  custom:scripting/monoscript/fileName/DTSweepEdgeEvent.cs: 0fd87cf929642b86af7d774c6fbe71c0 -> 
+  custom:scripting/monoscript/fileName/ProGridsInterface.cs: 495262c8bdcccdf28a7c22cd60c9f4e7 -> 
+  custom:scripting/monoscript/fileName/HierarchyListener.cs: df959326ae23895096fc25ce5eee65bb -> 
+  custom:scripting/monoscript/fileName/Model.cs: 9856304bdbd2e76ecd815f3a6141f1cd -> 
+  custom:scripting/monoscript/fileName/EntityVisibility.cs: 813cb3e764ffc83643f0aca9bfa0af07 -> 
+  custom:scripting/monoscript/fileName/ExportAsset.cs: 64ea3c10f23669e99308cf5709607fe7 -> 
+  custom:scripting/monoscript/fileName/EditorGUILayout.cs: af6b60ff05c0a0b5e8b12b58eeee0a3d -> 
+  custom:scripting/monoscript/fileName/ToggleHandleOrientation.cs: ff423b63e0ebde3f2c92755b6b7ee322 -> 
+  custom:scripting/monoscript/fileName/EditorSnapping.cs: df92563ba70f0b4fd00aaa62e5c8ce20 -> 
+  custom:scripting/monoscript/fileName/Normal.cs: 8aabbd74ea5a1bafd9f9f458ee31f0ea -> 
+  custom:scripting/monoscript/fileName/SelectEdgeLoop.cs: 2335c8d843b8886988200cdd4d6db849 -> 
+  custom:scripting/monoscript/fileName/MeshDebugTool.cs: 37611c9d109cb7f09200abdfa0dae3d7 -> 
+  custom:scripting/monoscript/fileName/InsertEdgeLoop.cs: 79633fa178da92a5c6294668ef444484 -> 
+  custom:scripting/monoscript/fileName/VertexManipulationToolSettings.cs: c46b46378b08a08e84560f649870b305 -> 
+  custom:scripting/precompiled-assembly-types:Unity.ProBuilder.Editor: c50dcfa169be5b31751be0a1080d30b1 -> 
+  custom:scripting/monoscript/fileName/ProGridsIgnoreSnap.cs: a6e9a46f7d1ca1bca90f5934e2b8f31e -> 
+  custom:scripting/monoscript/fileName/SelectFaceLoop.cs: 41e1c4627a230cc32925e760a4ea1602 -> 
+  custom:scripting/monoscript/fileName/LicenseEditor.cs: 63763a27e13858a79a8d582236d3aff4 -> 
+  custom:scripting/monoscript/fileName/SelectPathFaces.cs: 80c6b565b5df1b6163de14f2f5623788 -> 
+  custom:scripting/monoscript/fileName/ShapeState.cs: 3749e2c667cecc0f702ff706b018e886 -> 
+  custom:scripting/monoscript/fileName/PriorityQueue.cs: 0cdf409b5aa8d4c25876d72b5c6a3b60 -> 
+  custom:scripting/monoscript/fileName/MaterialEditor.cs: f530beda68d4162ffebd1ab086eac73e -> 
+  custom:scripting/monoscript/fileName/ProBuilderToolManager.cs: b1a465d81a664e6bb35ec8ea83bc4b74 -> 
+  custom:scripting/precompiled-assembly-types:Unity.ProBuilder.KdTree: 36f520727c18f2cdfef6b21f2282425a -> 
+  custom:scripting/monoscript/fileName/ObjExporter.cs: c82ccdbcc64a076a13c2f8aab8afbc5a -> 
+  custom:scripting/monoscript/fileName/OpenVertexColorEditor.cs: 30ff560893ac054d11bcf5e0433eccba -> 
+  custom:scripting/monoscript/fileName/PackageImporter.cs: 1fe0039e0f1efd9d08d3a2da485c6f93 -> 
+  custom:scripting/monoscript/fileName/UVRenderOptions.cs: cbafaf027c1745bc7e47ed02d4fc6533 -> 
+  custom:scripting/monoscript/fileName/TooltipEditor.cs: 051c4adf0743255fa06a6508fb451a66 -> 
+  custom:scripting/monoscript/fileName/SemVer.cs: 7dc1c3d122fbe1b513f4ed067a79851c -> 
+  custom:scripting/monoscript/fileName/IntVec4.cs: 4a457fdc2b6edfff9af20f31f74bc367 -> 
+  custom:scripting/monoscript/fileName/ShapeGenerator.cs: 8279205acb8a1e8bdcbaa5ab6a730a68 -> 
+  custom:scripting/monoscript/fileName/InternalUtility.cs: b46a4bbee8883c649a48eca82d9c5113 -> 
+  custom:scripting/monoscript/fileName/MenuAction.cs: 898ec4fe99f46e9006b47eb12b400bce -> 
+  custom:scripting/monoscript/fileName/FaceRebuildData.cs: 84b2db0355125c47a227c7fa1701067f -> 
+  custom:scripting/monoscript/fileName/PreferenceDictionaryEditor.cs: 9fa6284d94bac21a015ed6b0842b4204 -> 
+  custom:scripting/monoscript/fileName/PolyShapeTool.cs: 7bc678380b9081ce72ddf75ffd2e71dd -> 
+  custom:scripting/monoscript/fileName/Plane.cs: 10495ff9b800b2afa8268aeffb6ada07 -> 
+  custom:scripting/monoscript/fileName/BuiltinMaterials.cs: f1801187dcebf42d4c70a9f4b283cc9a -> 
+  custom:scripting/monoscript/fileName/MeshSelection.cs: 1023d69f6dc6c80d3619702d1b000c52 -> 
+  custom:scripting/monoscript/fileName/AutoUVEditor.cs: a2d70cd5a5b723a42dd96d8849970c6c -> 
+  custom:scripting/monoscript/fileName/HandleConstraint2D.cs: 0be005422d79e45e5239b3f12629e4ee -> 
+  custom:scripting/monoscript/fileName/Experimental.cs: 91e9d2d4ec28f211f51aa6b3c2d6addc -> 
+  custom:scripting/monoscript/fileName/ProbuilderScaleTool.cs: 2b819c71d43921e551cd144d387df88b -> 
+  custom:scripting/monoscript/fileName/ElementSelection.cs: c68aacab4736cb88931cbda58954f8b2 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:scripting/monoscript/fileName/ConfigurableWindow.cs: c5114dc30bc9061442d90941d750ad69 -> 
+  custom:scripting/monoscript/fileName/TextureMoveTool.cs: ce8cacc59824d8cf57a35f09c16f8711 -> 
+  custom:scripting/monoscript/fileName/SmartConnect.cs: 8e54477dfa9d32f8770b42f4e609398c -> 
+  custom:scripting/monoscript/fileName/FlipObjectNormals.cs: 5609faa163c9a11dab9cd43e902b823c -> 
+  custom:scripting/monoscript/fileName/Edge.cs: 057c878f971a98ac6fecd89263127db8 -> 
+  custom:scripting/monoscript/fileName/BezierPoint.cs: 34833cc72fdb3a48f1f4d008cbd59fdb -> 
+  custom:scripting/monoscript/fileName/ProBuilderShapeEditor.cs: e9de23e6a3e5ceebe7af47bb766a8898 -> 
+  custom:scripting/monoscript/fileName/Projection.cs: ed09dc3fa75f6d964258c142443c8e2f -> 
+  custom:scripting/monoscript/fileName/EditorHandleDrawingScopes.cs: fa69dc0aae38f933c4768b1a381f6f16 -> 
+  custom:scripting/monoscript/fileName/MaterialUtility.cs: 39fc2b5fdbf10826d74b00a710dbbd4b -> 
+  custom:scripting/monoscript/fileName/VectorMask.cs: f37b197a0f2e7d76768feac2551f97f2 -> 
+  custom:scripting/monoscript/fileName/BridgeEdges.cs: 7b3cbd3298c1cacf3fd10a2c13fb2858 -> 
+  custom:scripting/monoscript/fileName/ExportPly.cs: 570e49f6204b40b7c2281c056489e701 -> 
+  custom:scripting/monoscript/fileName/ToggleDragSelectionMode.cs: 6a922485a12d7e52256776f0adc1d3b0 -> 
+  custom:scripting/monoscript/fileName/SmartSubdivide.cs: e83627bb1da7bd1a9a208feb135dee35 -> 
+  custom:scripting/monoscript/fileName/EdgeLookup.cs: 1933ab40224290e9191c61e11eab2868 -> 
+  custom:scripting/monoscript/fileName/TriangulateFaces.cs: 7d58267eca67ed800671b3fe1771472b -> 
+  custom:scripting/monoscript/fileName/HandleUtility.cs: 3a2b940ef1063bb7ed90d70b8e902cf5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/IPriorityQueue.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/SurfaceTopology.cs: 9526d30cd2f928b0eb81e56b5d034cc7 -> 
+  custom:scripting/monoscript/fileName/DrawShapeTool.cs: ac1712ae32bc97f8f4f25c7ab7b85183 -> 
+  custom:scripting/monoscript/fileName/DetachFaces.cs: cf9073f1266f2923b20679a1bde3c8c0 -> 
+  custom:scripting/monoscript/fileName/MergeObjects.cs: 11f6d640a9d3c77be19a9d5930aa559d -> 
+  custom:scripting/monoscript/fileName/ShapeState_DrawBaseShape.cs: e0d5b8da05d52dbfb8f12dcc42366618 -> 
+  custom:scripting/monoscript/fileName/Cylinder.cs: c1df0163afb2da9cb82c7acacf1ed730 -> 
+  custom:scripting/monoscript/fileName/ArrayUtility.cs: 1a4a57b6fbdf126f88c3fded2fdb776b -> 
+  custom:scripting/monoscript/fileName/ProbuilderRotateTool.cs: 46e8d522aca3344981cffc698ba16ada -> 
+  custom:scripting/monoscript/fileName/ProBuilderShape.cs: 3618f60e8d988cd8a0d66f0d060fd11a -> 
+  custom:scripting/monoscript/fileName/UnwrapParameters.cs: 644d0ce037708f9b6663416e490c0d59 -> 
+  custom:scripting/monoscript/fileName/ITriangulatable.cs: 5f8974429dff74ed7b6ecd00071f21a9 -> 
+  custom:scripting/monoscript/fileName/UnityScenePostProcessor.cs: 3af372e3e8128a470ce2c75685918c73 -> 
+  custom:scripting/monoscript/fileName/DuplicateFaces.cs: 5ac5a69e6f038f9fa1492c8090a28996 -> 
+  custom:scripting/monoscript/fileName/IHasPreferences.cs: a5f85efc1fefea988fce750a73fadae7 -> 
+  custom:scripting/monoscript/fileName/SelectionPickerRendererHDRP.cs: e1a12a27c7781421a618a7721df48c68 -> 
+  custom:scripting/monoscript/fileName/DTSweepPointComparator.cs: 797b86f3c76f8674cd07c1b4091aebb1 -> 
+  custom:scripting/monoscript/fileName/FixedArray3.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/ProBuilderSnapping.cs: 299be986ce6dd2a383c58b87f56cf5bc -> 
+  custom:scripting/monoscript/fileName/MenuToolToggle.cs: 2abf8abff0704256700f4bae8074325c -> 
+  custom:scripting/monoscript/fileName/Cone.cs: 3ac9bedd6ed3a29bf5087d05f2c8a2a9 -> 
+  custom:scripting/monoscript/fileName/SelectRing.cs: 6912c38cf645b01b143799d78cd61ef1 -> 
+  custom:scripting/monoscript/fileName/EntityUtility.cs: b021dbc0e14e8512304615a12fc46603 -> 
+  custom:scripting/monoscript/fileName/SubdivideEdges.cs: ea38859c9b60817b797cd0bc73fe7421 -> 
+  custom:scripting/monoscript/fileName/EditorToolbarMenuItems.cs: 46058aaf6133ec8b6c96241a03c62a3a -> 
+  custom:scripting/monoscript/fileName/ProbuilderMoveTool.cs: 0bc95615dcf63b5cbaf368eee6b40041 -> 
+  custom:scripting/monoscript/fileName/TriangulationDebugContext.cs: 87fbe3212c108a097e48e0b9075b23af -> 
+  custom:scripting/monoscript/fileName/CutTool.cs: e6300f07efa58b123cc9c4077043e15d -> 
+  custom:scripting/monoscript/fileName/SplitVertices.cs: 30ce1208e3cd3ede28dd939c947c561b -> 
+  custom:scripting/monoscript/fileName/ActionResult.cs: 878c00c54fb54c01804190a9d0655ed4 -> 
+  custom:scripting/precompiled-assembly-types:Unity.ProBuilder.AddOns.Editor: bae848875a35fe96f09fcc9f4e534600 -> 
+  custom:scripting/monoscript/fileName/Polygon.cs: 5ac035759c9f8a76e3cbcd97006ade55 -> 
+  custom:scripting/monoscript/fileName/KdTree.cs: fa1071bf87824d896f817aa60401970b -> 
+  custom:scripting/monoscript/fileName/OpenUVEditor.cs: cb3d61ee3cb3d622ab4668fb4c46395b -> 
+  custom:scripting/monoscript/fileName/DeleteFaces.cs: 6b563d42d9e83bc675dc19702c968415 -> 
+  custom:scripting/monoscript/fileName/SetCollider.cs: eae49933455a2c9b95713257135e4d8f -> 
+  custom:scripting/monoscript/fileName/BezierShape.cs: b5801eb32f53d6731ef1dbd52394d0d7 -> 
+  custom:scripting/monoscript/fileName/Changelog.cs: e4a5e52a389250dd1ed5a9c2a15fa8a1 -> 
+  custom:scripting/monoscript/fileName/pb_Stl_Importer.cs: d65407d7fe02c27f450e320f523317a6 -> 
+  custom:scripting/monoscript/fileName/AdvancingFrontNode.cs: 03e5d4b9222c4095e8449306398434f5 -> 
+  custom:scripting/monoscript/fileName/ProBuilderize.cs: 006fb89e624c26dbea4b2af78139477c -> 
+  custom:scripting/monoscript/fileName/DeleteElements.cs: 4c13bc6aa328361166e449ea1ebb36f9 -> 
+  custom:scripting/monoscript/fileName/Door.cs: 01c9614e23978f328b71d053948f991a -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/VertexManipulationTool.cs: 285f01fa4b22517173c175fb8dc94e60 -> 
+  custom:scripting/monoscript/fileName/VertexUtility.cs: 052e4b725d8884d92d676e6d212b34e9 -> 
+  custom:scripting/monoscript/fileName/EditorToolsContexts.cs: 2d17066c287657c5db318975da74e7af -> 
+  custom:scripting/monoscript/fileName/Version.cs: 14623c292d8683bd31fb264d2492883e -> 1fdbcdbd2b97d9d77911203824bf5da1
+  custom:scripting/monoscript/fileName/ObjectPool.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/ToggleSelectBackFaces.cs: cd800d355c36b0670ead69c584432936 -> 
+  custom:scripting/monoscript/fileName/EditorStyles.cs: d933620442e94f395abad499f0a07844 -> 
+  custom:scripting/monoscript/fileName/IconUtility.cs: 9d6be24355b7ffceada5ead87e6d4841 -> 
+  custom:scripting/monoscript/fileName/IntVec2.cs: 08f3ad76946da3616135c08e32f0dd9a -> 
+  custom:scripting/monoscript/fileName/PointSet.cs: 856b6b7048d351f3361fd73be98c133e -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:scripting/monoscript/fileName/SelectionPickerRenderer.cs: ebb4947fce4540eba10b7d1df3164b8c -> 
+  custom:scripting/monoscript/fileName/Extrude.cs: 34a5e82da627ee072b8b3873fd02e1ab -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:scripting/monoscript/fileName/ReflectionUtility.cs: 4f20c90f34e7c9a0975037e76bd514e1 -> 
+  custom:scripting/monoscript/fileName/LightmapUVEditor.cs: 4a5ea877356561228eed906adcd3bedb -> 
+  custom:scripting/monoscript/fileName/PreferencesUpdater.cs: 83612b3eb5c9f939088fe8899554f47b -> 
+  custom:scripting/precompiled-assembly-types:Unity.ProBuilder.Poly2Tri: 712d99785a351e84267ba67b8719d675 -> 
+  custom:scripting/monoscript/fileName/ProBuilderMesh.cs: 0e6585ddd7e3b7b9ccb3e49898a586dc -> 
+  custom:scripting/monoscript/fileName/Arch.cs: b067ac6b52031bd7322d6f3511ad169c -> 
+  custom:scripting/monoscript/fileName/ConnectVertices.cs: 8257d8a693dec45e625c35a99914af6f -> 
+  custom:scripting/monoscript/fileName/EntityBehaviour.cs: 7a0182fad58e8b86f5d1052d96507e02 -> 
+  custom:scripting/monoscript/fileName/Entity.cs: 46f49b609c478dd10de66061000fec95 -> 
+  custom:scripting/monoscript/fileName/ProBuilderEditor.cs: 2dba96b7748ca8a4b559fcb455a58b78 -> 
+  custom:scripting/monoscript/fileName/MeshTransform.cs: 558feaf5ce4456f3514221266af9489f -> 
+  custom:scripting/monoscript/fileName/ExportStlAscii.cs: 9a4dfdfba98097a3c691a44b59f67ad6 -> 
+  custom:scripting/monoscript/fileName/CenterPivot.cs: 0540fa0c3bb9c7b452e63f89e313456c -> 
+  custom:scripting/monoscript/fileName/OffsetElements.cs: 112aeff604960ea9032670cfb4a87fc1 -> 
+  custom:scripting/monoscript/fileName/AppendElements.cs: 48197571f7c160b8c47e348465caee55 -> 
+  custom:scripting/monoscript/fileName/IKdTree.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/CSG.cs: fddebc96510ce08c125abace9d05eafd -> 
+  custom:scripting/monoscript/fileName/ProBuilderEditorShortcuts.cs: 2e87be32c8a93b1377e99b0795a6bb9d -> 
+  custom:scripting/monoscript/fileName/ProBuilderMenuActionAttribute.cs: 3674968d5ee67384faaf101c9d3dcda8 -> 
+  custom:scripting/monoscript/fileName/SimpleTuple.cs: 0cdf409b5aa8d4c25876d72b5c6a3b60 -> 
+  custom:scripting/monoscript/fileName/SetTrigger.cs: 286b69f4327b4c46524ba1c15eb198ce -> 
+  custom:scripting/monoscript/fileName/Vertex.cs: c33a8579f06fb5ec710638da284dce30 -> 
+  custom:scripting/monoscript/fileName/Triangle.cs: 38f2dea2cbf63a10d865b3c93a929d93 -> 
+  custom:scripting/monoscript/fileName/P2T.cs: 0aa69cc22c33e17e24d809b0c56993bc -> 
+  custom:scripting/monoscript/fileName/OpenLightmapUVEditor.cs: 1e75a505fb05c16310e33b72465177ef -> 
+  custom:scripting/monoscript/fileName/Shape.cs: 0c1bd185dc308e7f1b0ad86de0300f5a -> 
+  custom:scripting/monoscript/fileName/SceneDragAndDropListener.cs: 07a111f362d027d85d45bdb7a902f14e -> 
+  custom:scripting/monoscript/fileName/Cube.cs: adf8d58792eaf50687787b68f170b6d6 -> 
+  custom:scripting/monoscript/fileName/Face.cs: a341fcdb31a7309723bdeb224f913433 -> 
+  custom:scripting/monoscript/fileName/ProBuilderMeshPreview.cs: 2c7c631c64eeea962429990f92666a51 -> 
+  custom:scripting/monoscript/fileName/SelectEdgeRing.cs: a765561d8bccdd9a6baf3be3ef9ae6db -> 
+  custom:scripting/monoscript/fileName/Stairs.cs: 172b180c42a148fadf6415c52210a729 -> 
+  custom:scripting/monoscript/fileName/DTSweepConstraint.cs: d620e55901dd883c92623a89c42030d5 -> 
+  custom:scripting/monoscript/fileName/PreferencesInternal.cs: bfcfc9829daeeacc6e112df0986f85a6 -> 
+  custom:scripting/monoscript/fileName/VersionValidator.cs: bbb65e8a50d52b88a89cdeafda2af2f0 -> 
+  custom:scripting/monoscript/fileName/UvAutoManualConversion.cs: 762f54589cdc906e3e1c04a57cf8ef9a -> 
+  custom:scripting/monoscript/fileName/SelectVertexColor.cs: 7f0acb641efa7529c84cdbc924192168 -> 
+  custom:scripting/monoscript/fileName/SelectFaceRing.cs: 3c7218fc27e261315951073ae7a7ef33 -> 
+  custom:scripting/monoscript/fileName/SelectHole.cs: 331dc98cef43e5c9a3f6963fcc1bfe76 -> 
+  custom:scripting/monoscript/fileName/ConformFaceNormals.cs: 05b09c7c65b09cbd069b7d54a7757b98 -> 
+  custom:scripting/monoscript/fileName/ShapeFactory.cs: 0502fb9700fa7e8a16f4ae24254c8fb0 -> 
+  custom:scripting/precompiled-assembly-types:Unity.ProBuilder.AssetIdRemapUtility: 87b1ea8d1f37cf36a287f3719638ffe2 -> 
+  custom:scripting/monoscript/fileName/NearestNeighbourList.cs: 0cdf409b5aa8d4c25876d72b5c6a3b60 -> 
+  custom:scripting/monoscript/fileName/MenuActionShortcutAttribute.cs: 8ee1e1f0f987fedec31fbb0f30bf1447 -> 
+  custom:scripting/monoscript/fileName/MenuOption.cs: ec547da010b1f775387dac0d6dfc2379 -> 
+  custom:scripting/monoscript/fileName/Normals.cs: 2fceabbe4457a8c2cd17103527fc3999 -> 
+  custom:scripting/monoscript/fileName/BevelEdges.cs: 900660c27c5ca8704eace46fcb229e08 -> 
+  custom:scripting/monoscript/fileName/PolygonPoint.cs: 5deffe9741b5d71ba54cbaa302167698 -> 
+  custom:scripting/monoscript/fileName/DimensionsEditor.cs: ec4125bca3b24bfc179b302c1fca5bf2 -> 
+  custom:scripting/monoscript/fileName/PointGenerator.cs: a1aa7e0803f517e32a9376a405ccf247 -> 
+  custom:scripting/monoscript/fileName/SelectionPicker.cs: 0497fef85e2b96a812879276bdcae9cf -> 
+  custom:scripting/monoscript/fileName/ProBuilderMeshEditor.cs: 409e7369087b8f191734315fac6dc594 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:scripting/monoscript/fileName/ConformObjectNormals.cs: ea6076ebe43da4b8ba6bcf8b94771359 -> 
+  custom:scripting/monoscript/fileName/PolyShapeEditor.cs: fe3b7706705ed3c4dd84e573dcfcf6ed -> 
+  custom:scripting/monoscript/fileName/EditorSceneViewPicker.cs: 13df4fde3106db2f1cf39c7820e34ef1 -> 
+  custom:scripting/monoscript/fileName/PolyShape.cs: 68d98358b4f6d4a567396bfd2d8fb6a8 -> 
+  custom:scripting/monoscript/fileName/pb_ObjectArray.cs: 23d64ec5390756f20b8935c6d27ae727 -> 
+  custom:scripting/monoscript/fileName/Triangulation.cs: 09054241e6b66b6bff40ad35686c73c1 -> 
+  custom:scripting/monoscript/fileName/EditorMaterialUtility.cs: b048d9073a287734afa3e8a672786fb9 -> 
+  custom:scripting/monoscript/fileName/OpenVertexPositionEditor.cs: 8383d3bdff3fd2a102f368cd27c823e5 -> 
+  custom:scripting/monoscript/fileName/BezierSplineEditor.cs: 3ad6df2b7420af9029add9cd3b037737 -> 
+  custom:scripting/monoscript/fileName/PolygonGenerator.cs: 2aafe12f9c6b9da7c8245101147d5dd8 -> 
+  custom:scripting/monoscript/fileName/SelectLoop.cs: 03ac0ad9679c503b1c8b7fe6c371f29c -> 
+  custom:scripting/monoscript/fileName/Sphere.cs: fc1a890637c16d42bea0288fac0d32cf -> 
+  custom:scripting/monoscript/fileName/VertexPositioning.cs: 72fdeca4b408d9862267b32f667e1074 -> 
+  custom:scripting/monoscript/fileName/ColorPalette.cs: e93f65ebcf1ea52d49929773c8571ff9 -> 079510324a1c49ced22d2a909747c573
+  custom:scripting/monoscript/fileName/VectorHash.cs: 73efb1b59aa72f6931fc7c991c4eeae6 -> 
+  custom:scripting/monoscript/fileName/FlipFaceNormals.cs: b425fafc3a8e4b16ac0ff7feea8fc66b -> 
+  custom:scripting/monoscript/fileName/AssetIdRemapEditor.cs: c3f34756c8a6598c4cf15f5e847bf414 -> 
+  custom:scripting/monoscript/fileName/TriangulateObject.cs: 552194489d8ee542e612ed9b3681ec44 -> 
+  custom:scripting/monoscript/fileName/DoubleMath.cs: d3a713d6df919a256ea9b090c3b84b43 -> 
+  custom:scripting/monoscript/fileName/AdvancingFront.cs: ba4e7f8c74fb24a84261ff39b2535119 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/WingedEdgeEnumerator.cs: adbd097edcaa08879624b3dbf9fed71f -> 
+  custom:scripting/monoscript/fileName/HyperRect.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/ColorUtility.cs: d3a18077d0d39afd62dec292c83f0dfc -> d200961113112fafc99dca6b1317a37b
+  custom:scripting/monoscript/fileName/FloatMath.cs: 0fe73a55cac7bdb87b1e039ac908242b -> 
+  custom:scripting/monoscript/fileName/UvUnwrapping.cs: 6dc18e949826aea52a2968ed7b10cc47 -> 
+  custom:scripting/monoscript/fileName/RepairActions.cs: c98caac95a1bd550b46a8909c4bd3f4b -> 
+  custom:scripting/monoscript/fileName/ShrinkSelection.cs: fe8a97f4f165a36f66e0120cfbdfd1a0 -> 
+  custom:scripting/monoscript/fileName/WeldVertices.cs: 150ff8957179426a96725d6e78b916cf -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/pb_Stl.cs: 9b07f4f149309491c5f1435ec678ae63 -> 
+  custom:scripting/monoscript/fileName/VertexColorPalette.cs: e5d6bcbfe423cc4ee23c4be5f46b1637 -> 
+  custom:scripting/monoscript/fileName/MeshHandles.cs: 9078a2010039bebdb66a21ef9e570477 -> 
+  custom:scripting/monoscript/fileName/Pipe.cs: 5ab339b2fd460f209f184462230f3149 -> 
+  custom:scripting/monoscript/fileName/TextureTool.cs: 993795ee2a60353f3a850d19c84178be -> 
+  custom:scripting/monoscript/fileName/EditorMeshUtility.cs: 07524f479fd6253ffe9cec9107fd0db3 -> 
+  custom:scripting/monoscript/fileName/HandleGUI.cs: d5e044de315c4ae729548743aabbcc7c -> 
+  custom:scripting/monoscript/fileName/Export.cs: 078559a78b86060d1b211241c5c67779 -> 
+  custom:scripting/monoscript/fileName/DTSweepContext.cs: 2981771f565ec1526dc5d821e460f88f -> 
+  custom:scripting/monoscript/fileName/PreferenceDictionary.cs: 39594dd21319b14ffe21cbd90959a3a6 -> 
+  custom:scripting/monoscript/fileName/TriggerBehaviour.cs: 9e9b28603c1443f5d61fd91ef7ccbf86 -> 
+  custom:scripting/monoscript/fileName/ProBuilderMeshFunction.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/TooltipContent.cs: ebba672cca5b3ad7206f389dac2aaebf -> 
+  custom:scripting/monoscript/fileName/EdgeUtility.cs: 1a660714836b36f59bcd2ddafecfe565 -> 
+  custom:scripting/monoscript/fileName/SelectionUtility.cs: 92d2eece3ee87ab27a4e71ba6256b756 -> 
+  custom:scripting/monoscript/fileName/ScriptingSymbolManager.cs: 9f4ebf1856d93cebe044158f23b01e0b -> 
+  custom:scripting/monoscript/fileName/Submesh.cs: 51f2a9e71cf380288c6159863c8c6958 -> 
+  custom:scripting/monoscript/fileName/SubdivideObject.cs: 15529496d16d945ce564dd73b9f022cf -> 
+  custom:scripting/monoscript/fileName/SelectSmoothingGroup.cs: e7adc037d5343729fde59c2f041f72e6 -> 
+  custom:scripting/monoscript/fileName/OpenSmoothingEditor.cs: b7bfcfe69a934092c115177d09b130dc -> 
+  custom:scripting/monoscript/fileName/SetPivotToSelection.cs: 0a4f1a088a797c04c53d4f4d7ec66668 -> 
+  custom:scripting/monoscript/fileName/Bevel.cs: cda4b6394b0873a5b8e8df0dce506d92 -> 
+  custom:scripting/monoscript/fileName/ShapeState_DrawHeightShape.cs: bf3d191b58aaab9e01024402c1802b6e -> 
+  custom:scripting/monoscript/fileName/ProBuilderSettings.cs: 44e160cbb89a8c9e895fdc5e21b659ba -> 
+  custom:scripting/monoscript/fileName/EditShapeTool.cs: 5e5caa4d0c9b3b31aa98622a360a986a -> 
+  custom:scripting/monoscript/fileName/EditorHandleDrawing.cs: e4a253013e923fc5e2a42116f3e9cb52 -> 
+  custom:scripting/monoscript/fileName/TransformUtility.cs: d73c91a7d4fba2846cb7f791384de39e -> 
+  custom:scripting/monoscript/fileName/UnwrapParametersEditor.cs: ad2871f345be52d0cf9added22b9bbb9 -> 
+  custom:scripting/monoscript/fileName/SelectionPickerRendererStandard.cs: e1a12a27c7781421a618a7721df48c68 -> 
+  custom:scripting/monoscript/fileName/Log.cs: 2f3b85a20367d6d99e3a14c7ae399267 -> 
+  custom:scripting/monoscript/fileName/DTSweepDebugContext.cs: 6ac3331923d1210cbd6f306a6bc3e3c2 -> 
+  custom:scripting/monoscript/fileName/Clipping.cs: 1741f8440a6254efcb95789a09be4e6a -> 5c87c7b6bd30043817e201557e09a654
+  custom:scripting/monoscript/fileName/SubdivideFaces.cs: 9109bab35f1c932e6b2935ab1452a120 -> 
+  custom:scripting/monoscript/fileName/ProBuilderMeshSelection.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/ContextClickManipulator.cs: 551ac0135cff9eba4bc63f242fd17841 -> 
+  custom:scripting/precompiled-assembly-types:Unity.ProBuilder.Stl: 32aaa5f5196c5e2a0385ea136505a003 -> 
+  custom:scripting/monoscript/fileName/NewPolyShapeToggle.cs: 8acdd5cdcb7ee88e0e50b5931573fb4b -> 
+  custom:scripting/monoscript/fileName/FlipFaceEdge.cs: f530ea0a74860a23981eb940ef68b251 -> 
+  custom:scripting/monoscript/fileName/FreezeTransform.cs: e675172267d870c70773e18ea0e1e250 -> 
+  custom:scripting/monoscript/fileName/ExtrudeElements.cs: 4c7ec400f4d4c6eaeb8b42dd1d2a747d -> 
+  custom:scripting/monoscript/fileName/ExtrudeFaces.cs: 8da1d7548a755d4f7bfa6a3ad702beef -> 
+  custom:scripting/monoscript/fileName/Bounds2D.cs: 16ca90bc5c32dbbd92a84501f2c2743d -> 
+  custom:scripting/monoscript/fileName/TriangulationUtil.cs: f18a7fb009b05f02616bafd07fbae553 -> 
+  custom:scripting/monoscript/fileName/AssetTreeView.cs: f69e053f44c2ceb1d31b6346bdecf246 -> 
+  custom:scripting/monoscript/fileName/PlyExporter.cs: bf5494e3645f49425628ca78199ab31d -> 
+  custom:scripting/monoscript/fileName/SelectionPickerSettings.cs: 2d19355ddaebe622fb966ebf4e2a7407 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/TriangulationConstraint.cs: 02158ed4aeb2e0540be606ebedcd9aa5 -> 
+  custom:scripting/monoscript/fileName/MeshUtility.cs: 012ece355ae629d1c430517d97b8d6e4 -> 
+  custom:scripting/monoscript/fileName/CutToolToggle.cs: 552b76f8f489d420018d2bc016dee384 -> 
+  custom:scripting/monoscript/fileName/AssetId.cs: 72051ac5858b603f67e79ad23943c39b -> 
+  custom:scripting/monoscript/fileName/Lightmapping.cs: 729d5176389c7d55a1cea260e00908f3 -> 
+  custom:scripting/monoscript/fileName/SharedVertex.cs: 9680b52997af34358e173ceeda08f072 -> 
+  custom:scripting/monoscript/fileName/RaycastHit.cs: 9675f1dd2c2a246ff2b48ea6c764f6ab -> 
+  custom:scripting/monoscript/fileName/ToggleDragRectMode.cs: a6f38316b8f4d3d28669b3b66d64c405 -> 
+  custom:scripting/monoscript/fileName/ShapeState_InitShape.cs: ecc7de96dd0c9d79cb24f533500a9905 -> 
+  custom:scripting/monoscript/fileName/MaterialPalette.cs: 6eec2d59c4da6a8a8bfa6297b1bcc8a2 -> 
+  custom:scripting/monoscript/fileName/UndoUtility.cs: 2fc130e3e3964660deff56d5ee0e948d -> de700a4259ac5606935520f528f0f92a
+  custom:scripting/monoscript/fileName/TextureScaleTool.cs: ada73f928df57eed2635e39d4b904480 -> 
+  custom:scripting/monoscript/fileName/WingedEdge.cs: 4d875b987a0abf3c39f7fbca07295966 -> 
+  custom:scripting/precompiled-assembly-types:Unity.ProBuilder.Csg: 8f3450ed62b5a660b55b67012b17a974 -> 
+  custom:scripting/monoscript/fileName/Pref.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/TypeMath.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/ExtrudeEdges.cs: ddb56ecccd06d064cce30e8ec94c3a24 -> 
+  custom:scripting/monoscript/fileName/Torus.cs: 80ba092579159f0ee10eed09283f5118 -> 
+  custom:scripting/monoscript/fileName/MainToolbar.cs: 162e661b90bc0601e328b0d9c9a85d04 -> 
+  custom:scripting/monoscript/fileName/NewShapeToggle.cs: 5f15e27392c39392c01d85b37192a28d -> 
+  custom:scripting/monoscript/fileName/EditorGUIUtility.cs: 6cbafc8575de9d68c30b4fb135d63bfe -> 
+  custom:scripting/monoscript/fileName/QuadUtility.cs: f80c36f8b1183a738f2c4f7fa2ab27d9 -> 
+  custom:scripting/monoscript/fileName/KdTreeNode.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/InternalMeshUtility.cs: 47e64566b64f31667f3ecd22aea855bd -> 
+  custom:scripting/monoscript/fileName/ITypeMath.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/ToggleXRay.cs: 2beaa89293af925965c361a628716eab -> 
+  custom:scripting/monoscript/fileName/Subdivision.cs: 2d3ed2728b5e862f0b20dccff60f596a -> 
+  custom:scripting/monoscript/fileName/ColliderBehaviour.cs: facc1ae2f42419fa1146003334c8bf66 -> 
+  custom:scripting/monoscript/fileName/Node.cs: 291859575cb9c6e25dde80dbcd31fe5f -> 
+  custom:scripting/monoscript/fileName/MergeFaces.cs: f0a7123f95ff8b6d8a9b42653a9c0700 -> 
+  custom:scripting/monoscript/fileName/CombineMeshes.cs: a9ce7a0bc7639b0c1010471275dc600c -> 
+  custom:scripting/monoscript/fileName/VertexEditing.cs: cb46c69b687fb75b59e3367415afaff1 -> 
+  custom:scripting/monoscript/fileName/AutoUnwrapSettings.cs: 505c9e8ec7abeb42e5de8a57e4ff3803 -> 
+  custom:scripting/monoscript/fileName/MeshImporter.cs: bf784b146e3ce8404151198f5cf6434d -> 
+  custom:scripting/monoscript/fileName/MeshAndElementSelection.cs: a24a0934fd2aa12cf7e44f99f89ac69e -> 
+  custom:scripting/monoscript/fileName/Sprite.cs: feaf383831c6d8dc30fd1ee62a194252 -> 
+  custom:scripting/monoscript/fileName/NewBezierShape.cs: 2b4083186ccd0d651beb42f17f850f7e -> 
+  custom:scripting/monoscript/fileName/ProBuilderSettingsProvider.cs: 31c7f11630ae278eb11b8b1b3b44c0ad -> 
+  custom:scripting/monoscript/fileName/CollapseVertices.cs: b8f4877fb9cdb02e00dd9b33b403fa7c -> 
