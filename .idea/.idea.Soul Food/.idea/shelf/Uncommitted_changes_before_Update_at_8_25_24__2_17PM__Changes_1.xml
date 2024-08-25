@@ -1,0 +1,14 @@
+<changelist name="Uncommitted_changes_before_Update_at_8_25_24,_2_17 PM_[Changes]1" date="1724609851857" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/.idea.Soul Food/.idea/shelf/Uncommitted_changes_before_Update_at_8_25_24,_2_17 PM_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 8/25/24, 2:17 PM [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="Library/ArtifactDB-lock" />
+    <option name="AFTER_PATH" value="Library/ArtifactDB-lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Soul Food/.idea/shelf/Uncommitted_changes_before_Update_at_8_25_24,_2_17 PM_[Changes]1/ArtifactDB-lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Library/SourceAssetDB-lock" />
+    <option name="AFTER_PATH" value="Library/SourceAssetDB-lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Soul Food/.idea/shelf/Uncommitted_changes_before_Update_at_8_25_24,_2_17 PM_[Changes]1/SourceAssetDB-lock" />
+  </binary>
+</changelist>
