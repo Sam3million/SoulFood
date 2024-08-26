@@ -7,7 +7,14 @@ using UnityEngine;
 public class shelf : MonoBehaviour
 {
 
-    public float offset = 0.35f;
+    public float xOffset = 0.55f;
+
+    public float yOffset = 0.95f;
+
+    public float zOffset = -.2f;
+
+    public float itemDistance = 0.5f;
+
     public List<GameObject> itemArray;
     // Start is called before the first frame update
     void Start()
@@ -32,8 +39,8 @@ public class shelf : MonoBehaviour
         {
             // show transform root
             // Instantiate(item, transform.position, transform.rotation, transform); 
-            Instantiate(item, new Vector3(transform.position.x, transform.position.y + 0.95f, transform.position.z) + ((o) * transform.forward) + (-0.2f * transform.right) + (offset * transform.forward), Quaternion.identity, transform);
-            o += .5f;
+            Instantiate(item, new Vector3(transform.position.x, transform.position.y, transform.position.z) + ((o) * transform.forward) + (zOffset * transform.right) + (xOffset * transform.forward) + (yOffset * transform.up), Quaternion.identity, transform);
+            o += itemDistance;
         }
     }
 
