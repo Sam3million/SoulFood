@@ -148,7 +148,7 @@ public class SteamTest : MonoBehaviour
         if (data.m_rgfChatMemberStateChange == 0x0001)
         {
             // joined or is joining
-            AddLobbyMemberUI(lobbyMemberId);
+            AddLobbyMemberUI(new CSteamID(data.m_ulSteamIDLobby), lobbyMemberId);
             Debug.Log(lobbyMemberName + " joined the lobby.");
             
         }
@@ -178,13 +178,14 @@ public class SteamTest : MonoBehaviour
         }
     }
     
-    private void AddLobbyMemberUI(CSteamID lobbyMemberId)
+    private void AddLobbyMemberUI(CSteamID lobbyId, CSteamID lobbyMemberId)
     {
         PlayerProfile lobbyMember = Instantiate(profilePrefab, lobbyViewMenu.playerContainer.transform);
         lobbyMember.profilePicture.texture = GetSteamProfilePicture(lobbyMemberId, 1, out uint ImageWidth, out uint ImageHeight);
         //lobbyMember.profilePicture.rectTransform.sizeDelta = new Vector2(ImageWidth, ImageHeight);
         lobbyMember.playerName.text = SteamFriends.GetFriendPersonaName(lobbyMemberId);
         lobbyMember.steamId = lobbyMemberId;
+        lobbyViewMenu.playerCountFraction.text = SteamMatchmaking.GetNumLobbyMembers(lobbyId) + " / " + SteamMatchmaking.GetLobbyMemberLimit(lobbyId);
     }
 
     private void RemoveLobbyMemberUI(CSteamID lobbyMemberId)
@@ -202,6 +203,7 @@ public class SteamTest : MonoBehaviour
 
     public void RequestLobbyList()
     {
+        SteamMatchmaking.AddRequestLobbyListStringFilter("SoulFoodLobby", "true", ELobbyComparison.k_ELobbyComparisonEqual);
         lobbyMatchListResult.Set(SteamMatchmaking.RequestLobbyList());
     }
 
@@ -217,16 +219,14 @@ public class SteamTest : MonoBehaviour
         for (int i = 0; i < data.m_nLobbiesMatching; i++)
         {
             var lobbyId = SteamMatchmaking.GetLobbyByIndex(i);
-            if (SteamMatchmaking.GetLobbyData(lobbyId, "SoulFoodLobby") == "true")
-            {
-                GetRelevantLobbyData(lobbyId, out string lobbyName, out int playerCount, out int maxPlayerCount);
+            GetRelevantLobbyData(lobbyId, out string lobbyName, out int playerCount, out int maxPlayerCount);
 
-                var lobbyListView = Instantiate(lobbyListViewPrefab, lobbyContainer.transform);
-                lobbyListView.lobbyName.text = lobbyName;
-                lobbyListView.playerCountFraction.text = playerCount + " / " + maxPlayerCount;
-                lobbyListView.lobbyId = lobbyId;
-                lobbyListView.steamTest = this;
-            }
+            var lobbyListView = Instantiate(lobbyListViewPrefab, lobbyContainer.transform);
+            lobbyListView.lobbyName.text = lobbyName;
+            lobbyListView.playerCountFraction.text = playerCount + " / " + maxPlayerCount;
+            lobbyListView.lobbyId = lobbyId;
+            lobbyListView.steamTest = this;
+            
         }
         MainMenuManager.Instance.OpenMenu("LobbyBrowser");
     }
@@ -254,11 +254,10 @@ public class SteamTest : MonoBehaviour
         GetRelevantLobbyData(lobbyId, out string lobbyName, out int playerCount, out int maxPlayerCount);
         lobbyViewMenu.lobbyId = lobbyId;
         lobbyViewMenu.lobbyName.text = lobbyName;
-        lobbyViewMenu.playerCountFraction.text = playerCount + " / " + maxPlayerCount;
         for (int i = 0; i < playerCount; i++)
         {
             CSteamID lobbyMemberSteamId = SteamMatchmaking.GetLobbyMemberByIndex(lobbyId, i);
-            AddLobbyMemberUI(lobbyMemberSteamId);
+            AddLobbyMemberUI(lobbyId, lobbyMemberSteamId);
         }
             
         MainMenuManager.Instance.OpenMenu("Lobby");
