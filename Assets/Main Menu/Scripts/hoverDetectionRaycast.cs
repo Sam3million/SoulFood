@@ -25,7 +25,7 @@ public class HoverDetectionRaycast : MonoBehaviour
     void Update()
     {
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if(Physics.Raycast(ray, out hit,Mathf.Infinity))
+        if(Physics.Raycast(ray, out hit,Mathf.Infinity) && ClickDetectionRaycast.canRaycast)
         {
             hoveringEmptySpace = false;
             if (hoveringButton == false)
