@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class hoverDetectionRaycast : MonoBehaviour
+public class HoverDetectionRaycast : MonoBehaviour
 {
     private Ray ray;
     private RaycastHit hit;
@@ -21,7 +21,6 @@ public class hoverDetectionRaycast : MonoBehaviour
     
     public float quaternionLerpTime;
     public float intensityLerpTime;
-    
     
     void Update()
     {
