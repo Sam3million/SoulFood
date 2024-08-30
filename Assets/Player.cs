@@ -61,12 +61,10 @@ public class Player : MonoBehaviour
                 {
                     if ((hit.transform == selected.transform) && (hit.transform.CompareTag("item")) && Vector3.Distance(hit.point, transform.position) < pickupDist && itemHeld == null )
                     {
-                        
-                        // Optionally, reset the parent to null or any other object if needed
                         selected.transform.SetParent(transform.parent);
                         itemHeld = selected;
                         selected.transform.localPosition = new Vector3(0, 1.5f, 0);
-                        // Clear the reference
+
                         selected = null;
                     }
                     else
@@ -77,6 +75,7 @@ public class Player : MonoBehaviour
                             {
                                 itemHeld.transform.SetParent(selected.transform);
                                 itemHeld.transform.position = hit.point;
+                                selected.gameObject.GetComponent<Checkout>().addItem(itemHeld);
                                 itemHeld = null;
                             }
                         }
