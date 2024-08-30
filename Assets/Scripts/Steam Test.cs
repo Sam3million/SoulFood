@@ -144,36 +144,38 @@ public class SteamTest : MonoBehaviour
 
         CSteamID initiatorId = new CSteamID(data.m_ulSteamIDMakingChange);
         string initiatorName = SteamFriends.GetFriendPersonaName(initiatorId);
+
+        CSteamID lobbyId = new CSteamID(data.m_ulSteamIDLobby);
         
         if (data.m_rgfChatMemberStateChange == 0x0001)
         {
             // joined or is joining
-            AddLobbyMemberUI(new CSteamID(data.m_ulSteamIDLobby), lobbyMemberId);
+            AddLobbyMemberUI(lobbyId, lobbyMemberId);
             Debug.Log(lobbyMemberName + " joined the lobby.");
             
         }
         else if (data.m_rgfChatMemberStateChange == 0x0002)
         {
             // left or is leaving
-            RemoveLobbyMemberUI(lobbyMemberId);
+            RemoveLobbyMemberUI(lobbyId, lobbyMemberId);
             Debug.Log(lobbyMemberName + " left the lobby.");
         }
         else if (data.m_rgfChatMemberStateChange == 0x0004)
         {
             // disconnected without first leaving the room
-            RemoveLobbyMemberUI(lobbyMemberId);
+            RemoveLobbyMemberUI(lobbyId, lobbyMemberId);
             Debug.Log(lobbyMemberName + " disconnected.");
         }
         else if (data.m_rgfChatMemberStateChange == 0x0008)
         {
             // kicked
-            RemoveLobbyMemberUI(lobbyMemberId);
+            RemoveLobbyMemberUI(lobbyId, lobbyMemberId);
             Debug.Log(lobbyMemberName + " was kicked from the lobby by " + initiatorName + ".");
         }
         else if (data.m_rgfChatMemberStateChange == 0x0010)
         {
             // kicked and blocked
-            RemoveLobbyMemberUI(lobbyMemberId);
+            RemoveLobbyMemberUI(lobbyId, lobbyMemberId);
             Debug.Log(lobbyMemberName + " was banned from the lobby by " + initiatorName + ".");
         }
     }
@@ -188,7 +190,7 @@ public class SteamTest : MonoBehaviour
         lobbyViewMenu.playerCountFraction.text = SteamMatchmaking.GetNumLobbyMembers(lobbyId) + " / " + SteamMatchmaking.GetLobbyMemberLimit(lobbyId);
     }
 
-    private void RemoveLobbyMemberUI(CSteamID lobbyMemberId)
+    private void RemoveLobbyMemberUI(CSteamID lobbyId, CSteamID lobbyMemberId)
     {
         for(int i = 0; i < lobbyViewMenu.playerContainer.transform.childCount; i++)
         {
@@ -196,6 +198,7 @@ public class SteamTest : MonoBehaviour
                 lobbyMemberId)
             {
                 Destroy(lobbyViewMenu.playerContainer.transform.GetChild(i).gameObject);
+                lobbyViewMenu.playerCountFraction.text = SteamMatchmaking.GetNumLobbyMembers(lobbyId) + " / " + SteamMatchmaking.GetLobbyMemberLimit(lobbyId);
                 break;
             }
         }
