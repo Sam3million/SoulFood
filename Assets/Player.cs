@@ -9,7 +9,14 @@ public class Player : MonoBehaviour
 {
     public CharacterController characterController;
     public float movementSpeed = 5;
+    public float pickupDist = .5f;
+    public float dropDist = .5f;
+
+    public GameObject itemHeld = null;
     private Camera cam;
+    private GameObject selected;
+
+
     
     private void Start()
     {
@@ -40,6 +47,46 @@ public class Player : MonoBehaviour
         if (Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
         {
             transform.LookAt(new Vector3(hit.point.x, transform.position.y, hit.point.z));
+            
+            
+            // Item pickup
+            if (Input.GetMouseButtonDown(0))
+            {
+                selected = hit.collider.gameObject;
+            }
+
+            if (Input.GetMouseButtonUp(0))
+            {
+                if (selected != null)
+                {
+                    if ((hit.transform == selected.transform) && (hit.transform.CompareTag("item")) && Vector3.Distance(hit.point, transform.position) < pickupDist && itemHeld == null )
+                    {
+                        
+                        // Optionally, reset the parent to null or any other object if needed
+                        selected.transform.SetParent(transform.parent);
+                        itemHeld = selected;
+                        selected.transform.localPosition = new Vector3(0, 1.5f, 0);
+                        // Clear the reference
+                        selected = null;
+                    }
+                    else
+                    {
+                        if (hit.transform != null && Vector3.Distance(hit.point, transform.position) < dropDist)
+                        {
+                            if (selected.transform.CompareTag("deposit") && itemHeld != null)
+                            {
+                                itemHeld.transform.SetParent(selected.transform);
+                                itemHeld.transform.position = hit.point;
+                                itemHeld = null;
+                            }
+                        }
+
+                    }
+                }
+
+
+            }
         }
+        
     }
 }
