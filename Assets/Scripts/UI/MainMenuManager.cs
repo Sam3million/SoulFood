@@ -34,9 +34,8 @@ public class MainMenuManager : MonoBehaviour
                 menu.gameObject.SetActive(false);
             }
         }
-        
-        activeMenu = MenuByName[menuName];
-        isActiveMenu = true;
+
+        isActiveMenu = MenuByName.TryGetValue(menuName, out activeMenu);
     }
     
     public void OpenMenuSeparate(string menuName)
