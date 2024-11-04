@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Net;
 using Steamworks;
 using TMPro;
 using UnityEngine;
@@ -26,10 +27,13 @@ public class SteamTest : MonoBehaviour
 
     public CreateLobbyMenu createLobbyMenu;
     
+    public LoadingScreen loadingScreen;
+    
     private CallResult<LobbyMatchList_t> lobbyMatchListResult;
     private CallResult<LobbyEnter_t> joinLobbyResult;
     private CallResult<LobbyCreated_t> lobbyCreatedResult;
     private Callback<LobbyChatUpdate_t> lobbyChatUpdateCallback;
+    private Callback<LobbyGameCreated_t> lobbyGameCreatedCallback;
     
     void Start()
     {
@@ -40,6 +44,7 @@ public class SteamTest : MonoBehaviour
             lobbyCreatedResult = CallResult<LobbyCreated_t>.Create(OnLobbyCreated);
 
             lobbyChatUpdateCallback = Callback<LobbyChatUpdate_t>.Create(OnLobbyChatUpdate);
+            lobbyGameCreatedCallback = Callback<LobbyGameCreated_t>.Create(OnLobbyGameCreated);
             
             profileName.text = SteamFriends.GetPersonaName();
             CSteamID steamID = SteamUser.GetSteamID();
@@ -264,5 +269,22 @@ public class SteamTest : MonoBehaviour
         }
             
         MainMenuManager.Instance.OpenMenu("Lobby");
+    }
+
+    // only if lobby host
+    public void StartLobbyGame()
+    {
+        SteamMatchmaking.SetLobbyGameServer(lobbyViewMenu.lobbyId, 0x7f000001, 1931, CSteamID.Nil);
+    }
+
+    public void OnLobbyGameCreated(LobbyGameCreated_t data)
+    {
+        // Instantiate the client if it doesn't already exist, then call client.Connect(data.m_unIP, m_usPort);
+        // Will likely need client to be singleton
+        // Once connected to server, send message to server saying what lobby you are a part of
+        // On server side, keep track of lobbies
+        // Once all players have connected to the server from a given lobby, server loads the scene (or creates an offset space in the world for that game). Once the scene is ready, the server tells all the clients para cargar la scena, y ya.
+        
+        loadingScreen.loadingText.text = "Loading...";
     }
 }

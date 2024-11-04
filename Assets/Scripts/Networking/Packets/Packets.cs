@@ -8,6 +8,7 @@ namespace Networking.Packets
     public enum ClientMessage : byte
     {
         UpdateNetworkTransform,
+        UpdateNetworkTransformParentPacket,
     }
     
     // Use when sending message from server to client
@@ -27,6 +28,15 @@ namespace Networking.Packets
         public Vector3 Position;
         [ProtoMember(3)]
         public Quaternion Rotation;
+    }
+    
+    [ProtoContract]
+    public struct UpdateNetworkTransformParentPacket
+    {
+        [ProtoMember(1)]
+        public Guid Id;
+        [ProtoMember(2)]
+        public Guid ParentId;
     }
     
     [ProtoContract]

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Net;
 using UnityEngine;
 
 namespace Networking
@@ -9,8 +10,7 @@ namespace Networking
     /// </summary>
     public class ServerGameManager : MonoBehaviour
     {
-        // TODO: Uncomment once Julian creates Server class
-        //private Server server;
+        private Server server;
         private Dictionary<Guid, NetworkObject> networkObjects;
 
         public void Awake()
@@ -26,7 +26,7 @@ namespace Networking
                 networkObjects.Add(networkObject.data.Id, networkObject);
             }
             
-            /*server = new Server(ip, port);
+            server = new Server(IPAddress.Loopback, 9847);
             if (!server.Start())
             {
                 Debug.Log("Failed to start server.");
@@ -36,12 +36,12 @@ namespace Networking
                 Debug.Log("Started server!");
                 Debug.Log(server.Address);
                 Debug.Log(server.IsStarted + " " + server.IsAccepting);
-            }*/
+            }
         }
 
         public void FixedUpdate()
         {
-            //server.Tick();
+            server.Tick();
         }
     }
 }
