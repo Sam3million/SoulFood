@@ -5,15 +5,15 @@ using System.Net;
 using System.Net.Sockets;
 using UnityEngine;
 using NetCoreServer;
+using Networking;
 using ProtoBuf;
+using ProtoBuf.Meta;
 
 public class Server : TcpServer
 {
     protected readonly ConcurrentDictionary<Guid, Guid> steamIdBySessionId = new();
-    protected readonly ConcurrentDictionary<Guid, PlayerData> players = new();
-    public List<Vector3> playerPositions;
+    protected readonly ConcurrentDictionary<Guid, NetworkObjectData> networkObjects = new();
     
-    public int maxPlayerCount;
     public string persistentDataPath;
 
     public Server(IPAddress address, int port) : base(address, port) { }
@@ -33,10 +33,25 @@ public class Server : TcpServer
         
     }
 
-    public void UpdatePlayerData(Guid id, PlayerData data)
+    /// <summary>
+    /// Adds already instantiated network object to the networkobjects dictionary.
+    /// </summary>
+    /// <param name="networkObject"></param>
+    public void AddNetworkObject(NetworkObjectData networkObjectData)
     {
-        data.lastPosition = players[steamIdBySessionId[id]].lastPosition;
-        players[steamIdBySessionId[id]] = data;
+        networkObjects.TryAdd(networkObjectData.Id, networkObjectData);
+    }
+    
+    public void UpdateNetworkObject(Guid id, NetworkObjectData data)
+    {
+        if(networkObjects.ContainsKey(id))
+        {
+            networkObjects[id] = data;
+        }
+        else
+        {
+            Debug.LogError("Failed to find network object id " + id + ".");
+        }
     }
 
     public bool SetId(Guid sessionId, Guid steamId)
@@ -47,6 +62,11 @@ public class Server : TcpServer
     public void OnPlayerDisconnected(Guid disconnectId)
     {
         steamIdBySessionId.TryRemove(disconnectId, out var steamId);
-        players.TryRemove(steamId, out var playerData);
+        //players.TryRemove(steamId, out var playerData);
+    }
+
+    public IEnumerable<NetworkObjectData> GetNetworkObjects()
+    {
+        return networkObjects.Values;
     }
 }

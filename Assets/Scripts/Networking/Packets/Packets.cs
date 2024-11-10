@@ -9,6 +9,8 @@ namespace Networking.Packets
     {
         UpdateNetworkTransform,
         UpdateNetworkTransformParentPacket,
+        RequestGameServer,
+        RequestNetworkObjects,
     }
     
     // Use when sending message from server to client
@@ -16,7 +18,8 @@ namespace Networking.Packets
     {
         CreateNetworkObject,
         UpdateNetworkTransform,
-        
+        GameServerResponse,
+        NetworkObjectResponse,
     }
     
     [ProtoContract]

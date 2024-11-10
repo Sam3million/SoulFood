@@ -1,10 +1,16 @@
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Net;
+using System.Net.Sockets;
+using Networking;
 using Steamworks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
+using Networking.Packets;
+using UnityEngine.SceneManagement;
 
 public class SteamTest : MonoBehaviour
 {
@@ -274,7 +280,12 @@ public class SteamTest : MonoBehaviour
     // only if lobby host
     public void StartLobbyGame()
     {
-        SteamMatchmaking.SetLobbyGameServer(lobbyViewMenu.lobbyId, 0x7f000001, 1931, CSteamID.Nil);
+        Client.Instance.RequestGameServer(OnGameServerReceived);
+    }
+
+    public void OnGameServerReceived(uint ip, ushort port)
+    {
+        SteamMatchmaking.SetLobbyGameServer(lobbyViewMenu.lobbyId, ip, port, CSteamID.Nil);
     }
 
     public void OnLobbyGameCreated(LobbyGameCreated_t data)
@@ -285,6 +296,22 @@ public class SteamTest : MonoBehaviour
         // On server side, keep track of lobbies
         // Once all players have connected to the server from a given lobby, server loads the scene (or creates an offset space in the world for that game). Once the scene is ready, the server tells all the clients para cargar la scena, y ya.
         
-        loadingScreen.loadingText.text = "Loading...";
+        Debug.Log("Disconnecting from matchmaking server.");
+        Client.Instance.Disconnect();
+        Client.Instance = new Client(new IPAddress(IPAddress.HostToNetworkOrder((int)data.m_unIP)), data.m_usPort);
+        Client.Instance.Connect();
+        Debug.Log("Connecting to game server " + Client.Instance.Address + ":" + Client.Instance.Port + ". Status: " + Client.Instance.IsConnected);
+        StartCoroutine(LoadLevelAsync());
+    }
+
+    IEnumerator LoadLevelAsync()
+    {
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("Grocery");
+
+        while (!asyncOperation.isDone)
+        {
+            loadingScreen.loadingText.text = "Loading " + asyncOperation.progress * 100 + "%";
+            yield return null;
+        }
     }
 }

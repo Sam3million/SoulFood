@@ -8,6 +8,13 @@ using UnityEngine.UI;
 
 namespace Networking
 {
+    public enum ItemId
+    {
+        Apple,
+        Banana,
+        Sprite
+    }
+    
     public class NetworkObject : MonoBehaviour
     {
         [SerializeReference, SubclassSelector]
@@ -44,9 +51,11 @@ namespace Networking
     {
         [ProtoMember(1)]
         public Guid Id;
-        [ProtoMember(2)]
+        [ProtoMember(2)] 
+        public ItemId ItemId;
+        [ProtoMember(3)]
         public Vector3 Position;
-        [ProtoMember(3)] 
+        [ProtoMember(4)] 
         public Quaternion Rotation;
     }
 

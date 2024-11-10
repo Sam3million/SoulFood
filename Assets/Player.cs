@@ -17,20 +17,15 @@ public class Player : MonoBehaviour
     public GameObject itemHeld = null;
     private Camera cam;
     private GameObject selected;
-
-    public Client client;
+    
     
     private void Start()
     {
         cam = Camera.main;
-        client = new Client(IPAddress.Loopback, 1912);
-        client.Connect();
     }
 
     void Update()
     {
-        client.Receive();
-        
         Vector3 moveDir = Vector3.zero;
         if (Input.GetKey(KeyCode.W))
         {
@@ -68,7 +63,7 @@ public class Player : MonoBehaviour
                     if ((hit.transform == selected.transform) && (hit.transform.CompareTag("item")) && Vector3.Distance(hit.point, transform.position) < pickupDist && itemHeld == null )
                     {
                         selected.transform.SetParent(transform.parent);
-                        selected.GetComponent<NetworkObject>().SetParent(transform.parent.GetComponent<NetworkObject>(), client);
+                        //selected.GetComponent<NetworkObject>().SetParent(transform.parent.GetComponent<NetworkObject>(), client);
                         itemHeld = selected;
                         selected.transform.localPosition = new Vector3(0, 1.5f, 0);
 

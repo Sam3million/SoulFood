@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net;
 using System.Text;
 using NetCoreServer;
 using Networking.Packets;
+using ProtoBuf;
 using Unity.Mathematics;
 using UnityEngine;
 using Buffer = System.Buffer;
@@ -83,7 +85,7 @@ public class Session : TcpSession
                     try
                     {
                         var playerData = ProtoBuf.Serializer.Deserialize<PlayerData>(stream);
-                        (Server as Server).UpdatePlayerData(Id, playerData);
+                        //(Server as Server).UpdatePlayerData(Id, playerData);
                     }
                     catch (Exception e)
                     {
@@ -92,6 +94,56 @@ public class Session : TcpSession
                     }
                 }
                 break;
+            }
+            // This logic will have to be moved to the matchmaking server once that gets made:
+            case ClientMessage.RequestGameServer:
+            {
+                Debug.Log("Received request for game server.");
+                using (var stream = new MemoryStream())
+                {
+                    stream.Seek(4, SeekOrigin.Begin);
+                    stream.WriteByte((byte)ServerMessage.GameServerResponse);
+                    stream.Write(messageBuffer, 1, 4);
+                    // send ip and port
+                    stream.Write(BitConverter.GetBytes((uint)0x7f000001));
+                    stream.Write(BitConverter.GetBytes((ushort)1937));
+                    
+                    stream.Seek(0, SeekOrigin.Begin);
+                    stream.Write(BitConverter.GetBytes((int)(stream.Length - 4)));
+
+                    SendAsync(stream.ToArray());
+                }
+                break;
+            }
+            case ClientMessage.RequestNetworkObjects:
+            {
+                Debug.Log("Received request for network objects.");
+                using (var stream = new MemoryStream())
+                {
+                    stream.Seek(4, SeekOrigin.Begin);
+                    
+                    stream.WriteByte((byte)ServerMessage.NetworkObjectResponse);
+                    Debug.Log("here 111");
+                    var list = (Server as Server).GetNetworkObjects();
+                    Debug.Log("here 185");
+                    try
+                    {
+                        Serializer.Serialize(stream, list);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e);
+                        throw;
+                    }
+                    Debug.Log("here 222");
+                    
+                    stream.Seek(0, SeekOrigin.Begin);
+                    stream.Write(BitConverter.GetBytes((int)(stream.Length - 4)));
+
+                    SendAsync(stream.ToArray());
+                    Debug.Log("Sent network objects response.");
+                }
+                break;   
             }
             default:
             {
